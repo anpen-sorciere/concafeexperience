@@ -37,13 +37,10 @@ try {
     
     echo "3. bookings テーブルの修正\n";
     
-    // bookings テーブルに start_time カラムを追加
+    // bookings テーブルに start_time カラムを追加（MySQL互換版）
     $alterQueries = [
-        "ALTER TABLE bookings ADD COLUMN IF NOT EXISTS start_time TIME",
-        "ALTER TABLE bookings ADD COLUMN IF NOT EXISTS end_time TIME",
-        "ALTER TABLE bookings ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'pending'",
-        "ALTER TABLE bookings ADD COLUMN IF NOT EXISTS created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
-        "ALTER TABLE bookings ADD COLUMN IF NOT EXISTS updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
+        "ALTER TABLE bookings ADD COLUMN start_time TIME",
+        "ALTER TABLE bookings ADD COLUMN end_time TIME"
     ];
     
     foreach ($alterQueries as $query) {
@@ -51,7 +48,11 @@ try {
             $db->exec($query);
             echo "✅ クエリ実行成功: " . substr($query, 0, 50) . "...\n";
         } catch (Exception $e) {
-            echo "⚠️ クエリ実行警告: " . $e->getMessage() . "\n";
+            if (strpos($e->getMessage(), 'Duplicate column name') !== false) {
+                echo "✅ カラムは既に存在します: " . substr($query, 0, 50) . "...\n";
+            } else {
+                echo "⚠️ クエリ実行警告: " . $e->getMessage() . "\n";
+            }
         }
     }
     
