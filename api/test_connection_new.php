@@ -89,25 +89,28 @@ foreach ($directories as $dir) {
 echo "<h2>6. 多言語ファイル確認</h2>";
 
 $translationsPath = Bootstrap::getPath('data') . '/translations.json';
+echo "translations.json パス: " . $translationsPath . "<br>";
+
 if (file_exists($translationsPath)) {
     echo "✅ translations.json が存在します<br>";
     
-$translations = json_decode(file_get_contents($translationsPath), true);
-if ($translations && isset($translations['translations'])) {
-    $langData = $translations['translations'];
-    if (isset($langData['ja']) && isset($langData['en']) && isset($langData['zh-cn'])) {
-        echo "✅ 多言語データが正常に読み込まれました<br>";
-        echo "対応言語: " . implode(', ', array_keys($langData)) . "<br>";
+    $translations = json_decode(file_get_contents($translationsPath), true);
+    if ($translations && isset($translations['translations'])) {
+        $langData = $translations['translations'];
+        if (isset($langData['ja']) && isset($langData['en']) && isset($langData['zh-cn'])) {
+            echo "✅ 多言語データが正常に読み込まれました<br>";
+            echo "対応言語: " . implode(', ', array_keys($langData)) . "<br>";
+        } else {
+            echo "❌ 多言語データの構造が正しくありません<br>";
+            echo "利用可能なキー: " . implode(', ', array_keys($langData ?? [])) . "<br>";
+        }
     } else {
-        echo "❌ 多言語データの構造が正しくありません<br>";
-        echo "利用可能なキー: " . implode(', ', array_keys($langData ?? [])) . "<br>";
+        echo "❌ 多言語データの読み込みに失敗しました<br>";
+        echo "JSON構造: " . json_encode(array_keys($translations ?? [])) . "<br>";
     }
 } else {
-    echo "❌ 多言語データの読み込みに失敗しました<br>";
-    echo "JSON構造: " . json_encode(array_keys($translations ?? [])) . "<br>";
-}
-} else {
     echo "❌ translations.json が存在しません<br>";
+    echo "期待されるパス: " . $translationsPath . "<br>";
 }
 
 echo "<h2>7. PHP設定確認</h2>";
