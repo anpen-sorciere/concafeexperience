@@ -113,7 +113,7 @@ if (file_exists('booking_system.php')) {
 
 echo "<h2>5. ファイル権限確認</h2>";
 
-$directories = ['uploads', 'logs', 'cache', 'tmp'];
+$directories = ['../uploads', '../logs', '../cache', '../tmp'];
 foreach ($directories as $dir) {
     if (is_dir($dir)) {
         $perms = substr(sprintf('%o', fileperms($dir)), -4);
@@ -125,10 +125,10 @@ foreach ($directories as $dir) {
 
 echo "<h2>6. 多言語ファイル確認</h2>";
 
-if (file_exists('translations.json')) {
+if (file_exists('../data/translations.json')) {
     echo "✅ translations.json が存在します<br>";
     
-    $translations = json_decode(file_get_contents('translations.json'), true);
+    $translations = json_decode(file_get_contents('../data/translations.json'), true);
     if ($translations && isset($translations['ja']) && isset($translations['en']) && isset($translations['zh-cn'])) {
         echo "✅ 多言語データが正常に読み込まれました<br>";
         echo "対応言語: " . implode(', ', array_keys($translations)) . "<br>";
