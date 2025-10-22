@@ -71,6 +71,15 @@ class Bootstrap {
         // 重複スラッシュの除去
         $projectRoot = preg_replace('#/+#', '/', $projectRoot);
         
+        // デバッグ情報（本番環境では削除）
+        if (isset($_GET['debug_path'])) {
+            error_log("Bootstrap Path Detection Debug:");
+            error_log("SCRIPT_FILENAME: " . $_SERVER['SCRIPT_FILENAME']);
+            error_log("scriptPath: " . $scriptPath);
+            error_log("documentRoot: " . $documentRoot);
+            error_log("projectRoot: " . $projectRoot);
+        }
+        
         self::$paths = [
             'project_root' => $projectRoot,
             'script_path' => $scriptPath,

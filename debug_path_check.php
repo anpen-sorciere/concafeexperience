@@ -38,6 +38,7 @@ if (strpos($scriptPath, '/api/') !== false) {
 }
 
 $projectRoot = rtrim($projectRoot, '/');
+$projectRoot = preg_replace('#/+#', '/', $projectRoot);
 echo "最終的な projectRoot: " . $projectRoot . "\n\n";
 
 echo "4. 各パスの確認\n";
