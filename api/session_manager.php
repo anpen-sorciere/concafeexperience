@@ -19,21 +19,23 @@ class SessionManager {
             mkdir(self::$sessionPath, 0755, true);
         }
         
-        // セッション設定
-        ini_set('session.name', self::$sessionName);
-        ini_set('session.save_path', self::$sessionPath);
-        ini_set('session.cookie_lifetime', 0); // ブラウザ終了まで
-        ini_set('session.cookie_path', '/concafeexp/'); // プロジェクト固有パス
-        ini_set('session.cookie_domain', 'purplelion51.sakura.ne.jp');
-        ini_set('session.cookie_secure', 1); // HTTPS必須
-        ini_set('session.cookie_httponly', 1); // JavaScriptアクセス禁止
-        ini_set('session.cookie_samesite', 'Strict'); // CSRF対策
-        ini_set('session.use_strict_mode', 1); // セッション固定攻撃対策
-        ini_set('session.use_cookies', 1);
-        ini_set('session.use_only_cookies', 1);
-        ini_set('session.gc_probability', 1);
-        ini_set('session.gc_divisor', 100);
-        ini_set('session.gc_maxlifetime', 3600); // 1時間
+        // セッション設定（既にセッションが開始されている場合はスキップ）
+        if (session_status() === PHP_SESSION_NONE) {
+            ini_set('session.name', self::$sessionName);
+            ini_set('session.save_path', self::$sessionPath);
+            ini_set('session.cookie_lifetime', 0); // ブラウザ終了まで
+            ini_set('session.cookie_path', '/concafeexp/'); // プロジェクト固有パス
+            ini_set('session.cookie_domain', 'purplelion51.sakura.ne.jp');
+            ini_set('session.cookie_secure', 1); // HTTPS必須
+            ini_set('session.cookie_httponly', 1); // JavaScriptアクセス禁止
+            ini_set('session.cookie_samesite', 'Strict'); // CSRF対策
+            ini_set('session.use_strict_mode', 1); // セッション固定攻撃対策
+            ini_set('session.use_cookies', 1);
+            ini_set('session.use_only_cookies', 1);
+            ini_set('session.gc_probability', 1);
+            ini_set('session.gc_divisor', 100);
+            ini_set('session.gc_maxlifetime', 3600); // 1時間
+        }
         
         // セッション開始
         if (session_status() === PHP_SESSION_NONE) {

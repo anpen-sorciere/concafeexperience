@@ -66,7 +66,7 @@ class BookingSystem {
     // 予約可能な日時を取得
     public function getAvailableSlots($date, $plan) {
         $planConfig = $this->config['plans'][$plan];
-        $duration = $planConfig['duration_min']; // duration_min を使用
+        $duration = $planConfig['duration_min'] ?? $planConfig['duration'] ?? 60; // フォールバック対応
         
         // 営業時間内のスロットを生成
         $slots = $this->generateTimeSlots($date, $duration);

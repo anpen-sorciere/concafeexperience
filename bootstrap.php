@@ -287,22 +287,22 @@ class Bootstrap {
     
     // ログパスの取得
     public static function getLogPath() {
-        return self::$paths['logs'];
+        return self::$paths['logs'] ?? null;
     }
     
     // アップロードパスの取得
     public static function getUploadPath() {
-        return self::$paths['uploads'];
+        return self::$paths['uploads'] ?? null;
     }
     
     // キャッシュパスの取得
     public static function getCachePath() {
-        return self::$paths['cache'];
+        return self::$paths['cache'] ?? null;
     }
     
     // 一時ファイルパスの取得
     public static function getTmpPath() {
-        return self::$paths['tmp'];
+        return self::$paths['tmp'] ?? null;
     }
     
     // プロジェクトルートパスの取得
