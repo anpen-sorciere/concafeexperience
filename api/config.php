@@ -37,10 +37,10 @@ class Config {
         'base_url' => 'https://purplelion51.sakura.ne.jp/concafeexp/',
         'assets_url' => 'https://purplelion51.sakura.ne.jp/concafeexp/assets/',
         'api_url' => 'https://purplelion51.sakura.ne.jp/concafeexp/api/',
-        'upload_path' => '/home/purplelion51/www/concafeexp/uploads/',
-        'log_path' => '/home/purplelion51/www/concafeexp/logs/',
-        'cache_path' => '/home/purplelion51/www/concafeexp/cache/',
-        'tmp_path' => '/home/purplelion51/www/concafeexp/tmp/'
+        'upload_path' => './uploads/',
+        'log_path' => './logs/',
+        'cache_path' => './cache/',
+        'tmp_path' => './tmp/'
     ];
     
     // 営業時間設定
@@ -117,15 +117,15 @@ class Config {
     const UPLOAD_CONFIG = [
         'max_file_size' => 5 * 1024 * 1024, // 5MB
         'allowed_types' => ['jpg', 'jpeg', 'png', 'gif'],
-        'upload_path' => '/home/purplelion51/www/concafeexp/uploads/',
-        'temp_path' => '/home/purplelion51/www/concafeexp/tmp/'
+        'upload_path' => './uploads/',
+        'temp_path' => './tmp/'
     ];
     
     // ログ設定
     const LOG_CONFIG = [
         'enabled' => true,
         'level' => 'INFO', // DEBUG, INFO, WARNING, ERROR
-        'path' => '/home/purplelion51/www/concafeexp/logs/',
+        'path' => './logs/',
         'max_files' => 30,
         'max_size' => 10 * 1024 * 1024 // 10MB
     ];
@@ -134,7 +134,7 @@ class Config {
     const CACHE_CONFIG = [
         'enabled' => true,
         'driver' => 'file', // file, redis, memcached
-        'path' => '/home/purplelion51/www/concafeexp/cache/',
+        'path' => './cache/',
         'ttl' => 3600 // 1時間
     ];
     
