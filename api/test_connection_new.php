@@ -88,7 +88,15 @@ foreach ($directories as $dir) {
 
 echo "<h2>6. 多言語ファイル確認</h2>";
 
+// 一時的な修正: 直接パスを指定
 $translationsPath = Bootstrap::getPath('data') . '/translations.json';
+if (!$translationsPath || !file_exists($translationsPath)) {
+    // フォールバック: 直接パスを計算
+    $scriptPath = dirname($_SERVER['SCRIPT_FILENAME']);
+    $projectRoot = dirname($scriptPath); // /api/ から親ディレクトリへ
+    $translationsPath = $projectRoot . '/data/translations.json';
+}
+
 echo "translations.json パス: " . $translationsPath . "<br>";
 
 if (file_exists($translationsPath)) {
