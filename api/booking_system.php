@@ -66,7 +66,7 @@ class BookingSystem {
     // 予約可能な日時を取得
     public function getAvailableSlots($date, $plan) {
         $planConfig = $this->config['plans'][$plan];
-        $duration = $planConfig['duration'];
+        $duration = $planConfig['duration_min']; // duration_min を使用
         
         // 営業時間内のスロットを生成
         $slots = $this->generateTimeSlots($date, $duration);
@@ -101,8 +101,9 @@ class BookingSystem {
     
     private function getExistingBookings($date) {
         $stmt = $this->db->prepare("
-            SELECT start_time, duration 
-            FROM bookings 
+            SELECT start_time, duration_min 
+            FROM bookings b
+            JOIN plans p ON b.plan_id = p.id
             WHERE booking_date = ? AND status != 'cancelled'
         ");
         $stmt->execute([$date]);
@@ -115,7 +116,7 @@ class BookingSystem {
         
         foreach ($existingBookings as $booking) {
             $bookingStart = strtotime($booking['start_time']);
-            $bookingEnd = $bookingStart + ($booking['duration'] * 60);
+            $bookingEnd = $bookingStart + ($booking['duration_min'] * 60);
             
             // 時間が重複しているかチェック
             if (($slotStart < $bookingEnd) && ($slotEnd > $bookingStart)) {
@@ -141,7 +142,7 @@ class BookingSystem {
             $stmt = $this->db->prepare("
                 INSERT INTO bookings (
                     booking_id, name, email, phone, plan_type, 
-                    booking_date, start_time, duration, participants, 
+                    booking_date, start_time, duration_min, participants, 
                     message, status, created_at
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', NOW())
             ");
@@ -155,7 +156,7 @@ class BookingSystem {
                 $data['plan'],
                 $data['date'],
                 $data['time'],
-                $planConfig['duration'],
+                $planConfig['duration_min'],
                 $data['participants'],
                 $data['message'] ?? '',
             ]);
@@ -397,7 +398,7 @@ function initializeDatabase() {
         plan_type VARCHAR(20) NOT NULL,
         booking_date DATE NOT NULL,
         start_time TIME NOT NULL,
-        duration INT NOT NULL,
+        duration_min INT NOT NULL,
         participants INT NOT NULL,
         message TEXT,
         status ENUM('pending', 'confirmed', 'completed', 'cancelled') DEFAULT 'pending',
