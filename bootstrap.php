@@ -68,6 +68,9 @@ class Bootstrap {
         // パスの正規化
         $projectRoot = rtrim($projectRoot, '/');
         
+        // 重複スラッシュの除去
+        $projectRoot = preg_replace('#/+#', '/', $projectRoot);
+        
         self::$paths = [
             'project_root' => $projectRoot,
             'script_path' => $scriptPath,

@@ -68,11 +68,18 @@ if (file_exists($translationsPath)) {
     echo "✅ translations.json が存在します\n";
     
     $translations = json_decode(file_get_contents($translationsPath), true);
-    if ($translations && isset($translations['ja']) && isset($translations['en']) && isset($translations['zh-cn'])) {
-        echo "✅ 多言語データが正常に読み込まれました\n";
-        echo "対応言語: " . implode(', ', array_keys($translations)) . "\n";
+    if ($translations && isset($translations['translations'])) {
+        $langData = $translations['translations'];
+        if (isset($langData['ja']) && isset($langData['en']) && isset($langData['zh-cn'])) {
+            echo "✅ 多言語データが正常に読み込まれました\n";
+            echo "対応言語: " . implode(', ', array_keys($langData)) . "\n";
+        } else {
+            echo "❌ 多言語データの構造が正しくありません\n";
+            echo "利用可能なキー: " . implode(', ', array_keys($langData ?? [])) . "\n";
+        }
     } else {
         echo "❌ 多言語データの読み込みに失敗しました\n";
+        echo "JSON構造: " . json_encode(array_keys($translations ?? [])) . "\n";
     }
 } else {
     echo "❌ translations.json が存在しません\n";
