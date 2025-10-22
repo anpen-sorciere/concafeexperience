@@ -1,0 +1,103 @@
+# Con-Cafe Princess Experience - .gitignore
+
+# システムファイル
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE・エディタファイル
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ログファイル
+logs/*.log
+*.log
+
+# キャッシュファイル
+cache/*
+!cache/.gitkeep
+
+# 一時ファイル
+tmp/*
+!tmp/.gitkeep
+
+# アップロードファイル
+uploads/*
+!uploads/.gitkeep
+
+# 設定ファイル（機密情報を含む可能性）
+# config.php は含める（テンプレートとして）
+# 本番環境では別途設定
+
+# データベースファイル
+*.sql
+!data/database_schema.sql
+
+# バックアップファイル
+*.bak
+*.backup
+*.old
+
+# 圧縮ファイル
+*.zip
+*.tar.gz
+*.rar
+
+# 環境固有ファイル
+.env
+.env.local
+.env.production
+
+# 依存関係（もしあれば）
+vendor/
+node_modules/
+
+# ビルドファイル
+dist/
+build/
+
+# テストファイル
+test/
+tests/
+
+# ドキュメント（開発用）
+docs/
+
+# デプロイメントスクリプト（本番環境では削除推奨）
+deploy.php
+
+# セキュリティログ
+security.log
+error.log
+
+# セッションファイル
+sessions/
+
+# 一時的なファイル
+*.tmp
+*.temp
+
+# OS固有ファイル
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows固有ファイル
+*.lnk
+
+# プロジェクト固有の除外
+# 実際の画像ファイル（サンプル以外）
+assets/images/*
+!assets/images/.gitkeep
+!assets/images/sample.*
+
+# 本番環境の設定ファイル
+production_config.php
+local_config.php

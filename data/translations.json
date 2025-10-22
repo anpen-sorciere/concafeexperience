@@ -1,0 +1,391 @@
+{
+  "translations": {
+    "ja": {
+      "site_title": "Con-Cafe Princess Experience | 大阪日本橋オタロード",
+      "site_description": "大阪日本橋オタロードで外国人観光客向けのコンカフェ嬢体験サービス。プロの撮影とメイクで特別な思い出を作りませんか？",
+      "navigation": {
+        "home": "ホーム",
+        "concept": "コンセプト",
+        "plans": "プラン",
+        "gallery": "ギャラリー",
+        "access": "アクセス",
+        "contact": "お問い合わせ"
+      },
+      "hero": {
+        "title": "Con-Cafe Princess Experience",
+        "subtitle": "大阪日本橋オタロードで、外国人観光客向けの特別なコンカフェ嬢体験",
+        "cta_primary": "プランを見る",
+        "cta_secondary": "予約する"
+      },
+      "concept": {
+        "title": "コンセプト",
+        "main_title": "日本のポップカルチャーを体験しよう",
+        "description": "大阪日本橋オタロードは、アニメ・漫画・ゲームの聖地として世界中のオタク文化愛好者に知られています。私たちの「Con-Cafe Princess Experience」では、単なる見学に留まらず、実際にコンカフェ嬢に変身し、プロによる撮影を通して特別な思い出を形に残します。",
+        "features": {
+          "photography": {
+            "title": "プロ撮影",
+            "description": "経験豊富なカメラマンがあなたの魅力を最大限に引き出します"
+          },
+          "makeup": {
+            "title": "プロメイク",
+            "description": "提携ヘアサロンのスタッフによる本格的なメイクとヘアセット"
+          },
+          "experience": {
+            "title": "特別体験",
+            "description": "オタロードの雰囲気の中で、非日常的な体験をお楽しみください"
+          }
+        }
+      },
+      "plans": {
+        "title": "体験プラン",
+        "light": {
+          "name": "ライトプラン",
+          "subtitle": "「オタロードの魔法にかけられて」",
+          "price": "¥7,000〜",
+          "duration": "所要時間: 30〜45分",
+          "features": [
+            "スタンダードなメイド服の着用",
+            "プロカメラマンによる店内フォトブース撮影",
+            "記念チェキ1枚（落書きなし）"
+          ]
+        },
+        "basic": {
+          "name": "ベーシックプラン",
+          "subtitle": "「コンカフェ嬢の一日」",
+          "price": "¥15,000〜",
+          "duration": "所要時間: 60〜90分",
+          "features": [
+            "豪華な制服やアクセサリーの選択",
+            "プロによるポイントメイクとヘアセット",
+            "店内での本格的な撮影（全データ提供）",
+            "萌え体験を動画で撮影し、データで提供",
+            "記念チェキ2枚（落書きタイム付き）"
+          ]
+        },
+        "premium": {
+          "name": "プレミアムプラン",
+          "subtitle": "「伝説のコンカフェ嬢」",
+          "price": "¥30,000〜",
+          "duration": "所要時間: 120分〜",
+          "features": [
+            "プレミアム限定の特別な衣装",
+            "フルメイクとヘアセット",
+            "店内＋オタロードでの野外撮影",
+            "プロが編集したハイライト動画",
+            "記念チェキ3枚（落書きタイム付き）",
+            "フォトスタンドまたはフォトブック郵送"
+          ]
+        },
+        "book_now": "予約する",
+        "popular": "人気"
+      },
+      "gallery": {
+        "title": "ギャラリー"
+      },
+      "access": {
+        "title": "アクセス",
+        "location": "所在地",
+        "address": "大阪府大阪市浪速区日本橋",
+        "address_note": "（オタロード内）",
+        "nearest_station": "最寄り駅",
+        "stations": [
+          "地下鉄堺筋線「日本橋駅」徒歩3分",
+          "近鉄難波線「日本橋駅」徒歩3分",
+          "地下鉄千日前線「日本橋駅」徒歩3分"
+        ],
+        "business_hours": "営業時間",
+        "hours": "11:00〜21:00（最終受付19:00）",
+        "closed": "定休日：火曜日",
+        "show_map": "地図を表示"
+      },
+      "contact": {
+        "title": "お問い合わせ・予約",
+        "reservations": "ご予約・お問い合わせ",
+        "phone": "080-XXXX-XXXX",
+        "email": "info@con-cafe-princess.com",
+        "instagram": "@con_cafe_princess",
+        "tiktok": "@con_cafe_princess",
+        "form": {
+          "name": "お名前",
+          "email": "メールアドレス",
+          "phone": "電話番号",
+          "plan": "希望プラン",
+          "plan_placeholder": "プランを選択してください",
+          "datetime": "希望日時",
+          "participants": "参加人数",
+          "participants_options": {
+            "1": "1名",
+            "2": "2名",
+            "3": "3名",
+            "4": "4名以上"
+          },
+          "message": "ご要望・メッセージ",
+          "submit": "予約を送信"
+        }
+      },
+      "footer": {
+        "description": "大阪日本橋オタロードで、特別なコンカフェ嬢体験を",
+        "links": "リンク",
+        "social": "SNS"
+      }
+    },
+    "en": {
+      "site_title": "Con-Cafe Princess Experience | Osaka Nipponbashi Otaroad",
+      "site_description": "Special Con-Cafe Princess Experience for International Tourists in Osaka Nipponbashi Otaroad. Create special memories with professional photography and makeup!",
+      "navigation": {
+        "home": "Home",
+        "concept": "Concept",
+        "plans": "Plans",
+        "gallery": "Gallery",
+        "access": "Access",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Con-Cafe Princess Experience",
+        "subtitle": "Special Con-Cafe Princess Experience for International Tourists in Osaka Nipponbashi Otaroad",
+        "cta_primary": "View Plans",
+        "cta_secondary": "Book Now"
+      },
+      "concept": {
+        "title": "Concept",
+        "main_title": "Experience Japanese Pop Culture",
+        "description": "Osaka Nipponbashi Otaroad is known worldwide as a sacred place for anime, manga, and games among otaku culture enthusiasts. Our 'Con-Cafe Princess Experience' goes beyond just sightseeing - you'll actually transform into a Con-Cafe princess and create special memories through professional photography.",
+        "features": {
+          "photography": {
+            "title": "Professional Photography",
+            "description": "Experienced photographers will bring out your best features"
+          },
+          "makeup": {
+            "title": "Professional Makeup",
+            "description": "Professional makeup and hair styling by partner salon staff"
+          },
+          "experience": {
+            "title": "Special Experience",
+            "description": "Enjoy an extraordinary experience in the atmosphere of Otaroad"
+          }
+        }
+      },
+      "plans": {
+        "title": "Experience Plans",
+        "light": {
+          "name": "Light Plan",
+          "subtitle": "\"Enchanted in Otaroad\"",
+          "price": "¥7,000~",
+          "duration": "Duration: 30-45 minutes",
+          "features": [
+            "Standard maid outfit",
+            "Professional photographer booth shooting",
+            "1 commemorative cheki (no doodle)"
+          ]
+        },
+        "basic": {
+          "name": "Basic Plan",
+          "subtitle": "\"A Day in the Life of a Con-Cafe Princess\"",
+          "price": "¥15,000~",
+          "duration": "Duration: 60-90 minutes",
+          "features": [
+            "Luxury uniform and accessory selection",
+            "Professional point makeup and hair styling",
+            "Professional shooting in-store (all data provided)",
+            "Moe experience video shooting and data provision",
+            "2 commemorative cheki (with doodle time)"
+          ]
+        },
+        "premium": {
+          "name": "Premium Plan",
+          "subtitle": "\"Legendary Princess Plan\"",
+          "price": "¥30,000~",
+          "duration": "Duration: 120+ minutes",
+          "features": [
+            "Premium limited special outfit",
+            "Full makeup and hair styling",
+            "Indoor + outdoor shooting in Otaroad",
+            "Professional edited highlight video",
+            "3 commemorative cheki (with doodle time)",
+            "Photo stand or photo book delivery"
+          ]
+        },
+        "book_now": "Book Now",
+        "popular": "Popular"
+      },
+      "gallery": {
+        "title": "Gallery"
+      },
+      "access": {
+        "title": "Access",
+        "location": "Location",
+        "address": "Nipponbashi, Naniwa-ku, Osaka City, Osaka Prefecture",
+        "address_note": "(Inside Otaroad)",
+        "nearest_station": "Nearest Station",
+        "stations": [
+          "Sakaisuji Line \"Nipponbashi Station\" 3 minutes walk",
+          "Kintetsu Namba Line \"Nipponbashi Station\" 3 minutes walk",
+          "Sennichimae Line \"Nipponbashi Station\" 3 minutes walk"
+        ],
+        "business_hours": "Business Hours",
+        "hours": "11:00-21:00 (Last reception 19:00)",
+        "closed": "Closed: Tuesdays",
+        "show_map": "Show Map"
+      },
+      "contact": {
+        "title": "Contact & Booking",
+        "reservations": "Reservations & Inquiries",
+        "phone": "080-XXXX-XXXX",
+        "email": "info@con-cafe-princess.com",
+        "instagram": "@con_cafe_princess",
+        "tiktok": "@con_cafe_princess",
+        "form": {
+          "name": "Name",
+          "email": "Email",
+          "phone": "Phone",
+          "plan": "Preferred Plan",
+          "plan_placeholder": "Please select a plan",
+          "datetime": "Preferred Date & Time",
+          "participants": "Number of Participants",
+          "participants_options": {
+            "1": "1 person",
+            "2": "2 people",
+            "3": "3 people",
+            "4": "4+ people"
+          },
+          "message": "Requests & Messages",
+          "submit": "Submit Booking"
+        }
+      },
+      "footer": {
+        "description": "Special Con-Cafe Princess Experience in Osaka Nipponbashi Otaroad",
+        "links": "Links",
+        "social": "Social Media"
+      }
+    },
+    "zh-cn": {
+      "site_title": "女仆咖啡公主体验 | 大阪日本桥御宅路",
+      "site_description": "在大阪日本桥御宅路为国际游客提供特别的女仆咖啡公主体验。通过专业摄影和化妆创造特殊回忆！",
+      "navigation": {
+        "home": "首页",
+        "concept": "概念",
+        "plans": "套餐",
+        "gallery": "画廊",
+        "access": "交通",
+        "contact": "联系"
+      },
+      "hero": {
+        "title": "女仆咖啡公主体验",
+        "subtitle": "在大阪日本桥御宅路为国际游客提供特别的女仆咖啡公主体验",
+        "cta_primary": "查看套餐",
+        "cta_secondary": "立即预订"
+      },
+      "concept": {
+        "title": "概念",
+        "main_title": "体验日本流行文化",
+        "description": "大阪日本桥御宅路作为动漫、漫画、游戏的圣地，被全世界的御宅文化爱好者所熟知。我们的'女仆咖啡公主体验'不仅仅是观光，您将真正变身为女仆咖啡公主，通过专业摄影创造特殊回忆。",
+        "features": {
+          "photography": {
+            "title": "专业摄影",
+            "description": "经验丰富的摄影师将展现您的最佳魅力"
+          },
+          "makeup": {
+            "title": "专业化妆",
+            "description": "合作沙龙工作人员的专业化妆和发型设计"
+          },
+          "experience": {
+            "title": "特别体验",
+            "description": "在御宅路的氛围中享受非凡体验"
+          }
+        }
+      },
+      "plans": {
+        "title": "体验套餐",
+        "light": {
+          "name": "轻量套餐",
+          "subtitle": "\"御宅路的魔法\"",
+          "price": "¥7,000起",
+          "duration": "所需时间：30-45分钟",
+          "features": [
+            "标准女仆装",
+            "专业摄影师店内摄影棚拍摄",
+            "纪念拍立得1张（无涂鸦）"
+          ]
+        },
+        "basic": {
+          "name": "基础套餐",
+          "subtitle": "\"女仆咖啡公主的一天\"",
+          "price": "¥15,000起",
+          "duration": "所需时间：60-90分钟",
+          "features": [
+            "豪华制服和配饰选择",
+            "专业重点化妆和发型设计",
+            "店内专业拍摄（提供全部数据）",
+            "萌系体验视频拍摄并提供数据",
+            "纪念拍立得2张（含涂鸦时间）"
+          ]
+        },
+        "premium": {
+          "name": "高级套餐",
+          "subtitle": "\"传奇女仆咖啡公主\"",
+          "price": "¥30,000起",
+          "duration": "所需时间：120分钟以上",
+          "features": [
+            "高级限定特别服装",
+            "全套化妆和发型设计",
+            "店内+御宅路户外拍摄",
+            "专业编辑精彩视频",
+            "纪念拍立得3张（含涂鸦时间）",
+            "照片支架或相册邮寄"
+          ]
+        },
+        "book_now": "立即预订",
+        "popular": "热门"
+      },
+      "gallery": {
+        "title": "画廊"
+      },
+      "access": {
+        "title": "交通",
+        "location": "位置",
+        "address": "大阪府大阪市浪速区日本桥",
+        "address_note": "（御宅路内）",
+        "nearest_station": "最近车站",
+        "stations": [
+          "地铁堺筋线\"日本桥站\"步行3分钟",
+          "近铁难波线\"日本桥站\"步行3分钟",
+          "地铁千日前线\"日本桥站\"步行3分钟"
+        ],
+        "business_hours": "营业时间",
+        "hours": "11:00-21:00（最后接待19:00）",
+        "closed": "休息日：星期二",
+        "show_map": "显示地图"
+      },
+      "contact": {
+        "title": "联系和预订",
+        "reservations": "预订和咨询",
+        "phone": "080-XXXX-XXXX",
+        "email": "info@con-cafe-princess.com",
+        "instagram": "@con_cafe_princess",
+        "tiktok": "@con_cafe_princess",
+        "form": {
+          "name": "姓名",
+          "email": "邮箱",
+          "phone": "电话",
+          "plan": "首选套餐",
+          "plan_placeholder": "请选择套餐",
+          "datetime": "首选日期时间",
+          "participants": "参加人数",
+          "participants_options": {
+            "1": "1人",
+            "2": "2人",
+            "3": "3人",
+            "4": "4人以上"
+          },
+          "message": "要求和留言",
+          "submit": "提交预订"
+        }
+      },
+      "footer": {
+        "description": "在大阪日本桥御宅路体验特别的女仆咖啡公主",
+        "links": "链接",
+        "social": "社交媒体"
+      }
+    }
+  }
+}
