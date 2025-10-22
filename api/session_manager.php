@@ -6,7 +6,7 @@ class SessionManager {
     
     private static $initialized = false;
     private static $sessionName = 'CONCAFE_SESSION';
-    private static $sessionPath = '/home/purplelion51/www/concafeexp/sessions';
+    private static $sessionPath = './sessions'; // 相対パスに変更
     
     // セッションの初期化
     public static function init() {
