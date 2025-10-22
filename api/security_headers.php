@@ -103,22 +103,14 @@ class SecurityHeaders {
     
     // CSRFトークンの生成
     public static function generateCSRFToken() {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-        
-        $token = bin2hex(random_bytes(32));
-        $_SESSION['csrf_token'] = $token;
-        return $token;
+        require_once __DIR__ . '/session_manager.php';
+        return SessionManager::generateCSRFToken();
     }
     
     // CSRFトークンの検証
     public static function validateCSRFToken($token) {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-        
-        return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
+        require_once __DIR__ . '/session_manager.php';
+        return SessionManager::validateCSRFToken($token);
     }
     
     // ログイン試行の制限
@@ -147,15 +139,8 @@ class SecurityHeaders {
     
     // セッション設定
     public static function configureSession() {
-        if (session_status() === PHP_SESSION_NONE) {
-            // セッション設定
-            ini_set('session.cookie_httponly', 1);
-            ini_set('session.cookie_secure', 1);
-            ini_set('session.use_strict_mode', 1);
-            ini_set('session.cookie_samesite', 'Strict');
-            
-            session_start();
-        }
+        require_once __DIR__ . '/session_manager.php';
+        SessionManager::init();
     }
     
     // エラーログの記録
