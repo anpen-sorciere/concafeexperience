@@ -49,11 +49,24 @@ class Bootstrap {
         $scriptPath = dirname($_SERVER['SCRIPT_FILENAME']);
         $documentRoot = $_SERVER['DOCUMENT_ROOT'];
         
-        // プロジェクトルートの検出
+        // プロジェクトルートの検出（より確実な方法）
         $projectRoot = $scriptPath;
+        
+        // /api/ ディレクトリ内から実行されている場合
         if (strpos($scriptPath, '/api/') !== false) {
             $projectRoot = dirname($scriptPath);
         }
+        // /concafeexp/ ディレクトリ内から実行されている場合
+        elseif (strpos($scriptPath, '/concafeexp/') !== false) {
+            $projectRoot = $scriptPath;
+        }
+        // その他の場合、DOCUMENT_ROOT からの相対パスを計算
+        else {
+            $projectRoot = $documentRoot . '/concafeexp';
+        }
+        
+        // パスの正規化
+        $projectRoot = rtrim($projectRoot, '/');
         
         self::$paths = [
             'project_root' => $projectRoot,
